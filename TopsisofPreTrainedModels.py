@@ -40,7 +40,7 @@ def content_overlap_evaluation(reference, hypothesis):
 
 
 # Create a DataFrame to store the evaluation results
-columns = ["ROUGE-1", "ROUGE-2", "ROUGE-L", "BLEU", "Content_Overlap"]
+columns = ["ROUGE-1", "ROUGE-2", "ROUGE-L", "Content_Overlap"]
 results_df = pd.DataFrame(columns=columns)
 
 # Evaluate each model
