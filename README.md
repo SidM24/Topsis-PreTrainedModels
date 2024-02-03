@@ -26,13 +26,40 @@ ROUGE-L measures the longest common subsequence (LCS) of words between the gener
 
 Content Overlap Evaluation is a custom metric designed to evaluate the overlap of content between the generated summary and reference summaries.
 
+### Evaluation Parameter Results
+
+The result.csv file stores the calculated evaluation metrics for every model as follows
+
+| ROUGE-1     | ROUGE-2     | ROUGE-L     | Content_Overlap |
+|-------------|-------------|-------------|-----------------|
+| 0.16216216  | 0.043478259 | 0.16216216  | 0.126621508     |
+| 0.117647056 | 0           | 0.117647056 | 0.111593981     |
+| 0.166666664 | 0.037037036 | 0.166666664 | 0.081711684     |
+| 0.055555553 | 0           | 0.055555553 | 0.059981266     |
+| 0.206896549 | 0.060606058 | 0.206896549 | 0.1645521       |
+
 ## Evaluation Results
+
+The output_with_topsis.csv file stores the final result obtained after application of the TOPSIS for selection of the best model.
+
+| Model            | ROUGE-1     | ROUGE-2     | ROUGE-L     | Content_Overlap | Topsis Score | Final Rank |
+|------------------|-------------|-------------|-------------|-----------------|--------------|------------|
+| t5-small-booksum | 0.16216216  | 0.043478259 | 0.16216216  | 0.126621508     | 0.699806524  | 2          |
+| distlbart-cnn    | 0.117647056 | 0           | 0.117647056 | 0.111593981     | 0.28046912   | 4          |
+| Falconsai        | 0.166666664 | 0.037037036 | 0.166666664 | 0.081711684     | 0.584748487  | 3          |
+| bart-factbook    | 0.055555553 | 0           | 0.055555553 | 0.059981266     | 0            | 5          |
+| bart-large-xsum  | 0.206896549 | 0.060606058 | 0.206896549 | 0.1645521       | 1            | 1          |
+
+## Best Model
 
 Based on the evaluation of the specified models using the mentioned metrics, the BART-LARGE-XSUM-SAMSUM model achieved the highest TOPSIS score, indicating superior performance across the evaluation parameters.
 
+
 ## Usage
 
-Provide instructions on how to reproduce the evaluation results. Include details on how to run the evaluation script and analyze the metrics.
+The TopsisofPreTrainedModels.py file contains the code for calculation of the evaluation parameters for each of the pre-trained text-summarization models used above
+The main.py file stores the code to calculate the best Model based on the results
+
 
 ```bash
 # Example command for running evaluation
