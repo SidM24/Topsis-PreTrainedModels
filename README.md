@@ -52,7 +52,7 @@ The output_with_topsis.csv file stores the final result obtained after applicati
 
 ## Best Model
 
-Based on the evaluation of the specified models using the mentioned metrics, the BART-LARGE-XSUM-SAMSUM model achieved the highest TOPSIS score, indicating superior performance across the evaluation parameters.
+Based on the evaluation of the specified models using the mentioned metrics, the _**BART-LARGE-XSUM-SAMSUM**_ model achieved the highest TOPSIS score, indicating superior performance across the evaluation parameters.
 
 
 ## Usage
@@ -60,5 +60,10 @@ Based on the evaluation of the specified models using the mentioned metrics, the
 The TopsisofPreTrainedModels.py file contains the code for calculation of the evaluation parameters for each of the pre-trained text-summarization models used above
 The main.py file stores the code to calculate the best Model based on the results
 
+```bash
+python TopsisofPreTrainedModels.py
+```
 
-
+```python
+python main.py  
+```
