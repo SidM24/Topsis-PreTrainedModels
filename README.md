@@ -26,7 +26,7 @@ ROUGE-L measures the longest common subsequence (LCS) of words between the gener
 
 Content Overlap Evaluation is a custom metric designed to evaluate the overlap of content between the generated summary and reference summaries.
 
-### Evaluation Parameter Results
+## Evaluation Parameter Results
 
 The result.csv file stores the calculated evaluation metrics for every model as follows
 
@@ -61,6 +61,3 @@ The TopsisofPreTrainedModels.py file contains the code for calculation of the ev
 The main.py file stores the code to calculate the best Model based on the results
 
 
-```bash
-# Example command for running evaluation
-python evaluate_models.py --model bart-large-xsum-samsum --input input.txt --reference reference.txt
